@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="flex space-between mx-12 bg-sky-200 px-10 mt-4 rounded-sm">
+        <p><span class="text-2xl font-bold">Interactive</span><br>Geometry Genius</p>
+        <a href="geometry.html"><button class="bg-blue-600 my-3 py-1 px-6 rounded-lg">Home</button></a>
+    </header> 
+
+    <main>
+        <section class="mx-4">
+            <p class="mt-10 text-2xl font-semibold text-center"><u>What is DOM and what is the purpose of DOM?</u></p>
+            <p class="mt-4"><span class="text-xl font-semibold">Ans : </span>Dom is a programming interface to access and control HTML and CSS from JavaScript.  Dom is used to access and modify or add any HTML tag using Id, Class, Tag etc. from JavaScript and to perform CSS function from JavaScript. With the help help of this information can be reused in different places instead of writing it in one place. This makes coding easier.</p>
+        </section>
+
+        <section class="mx-4">
+            <p class="mt-10 text-2xl font-semibold text-center"><u> How will you select HTML elements using DOM? Name the DOM methods.</u></p>
+            <p class="mt-4"><span class="text-xl font-semibold">Ans : </span>If there is a tag or class or id inside the tag in html, you can access the html from javascript with tag name, id or class name using dom. If there is an html a &lt;p&gt; tag then that tag can be accessed with getElementByTagName. Similarly, if there is an id or class inside the tag, they can be accessed with getElementById and getElementByClassName. querySelector is used to get the first child of a section and querySelectorAll is used to get all children. Also get the inner text or value of the item using value, innerText etc. In this way the html can be accessed from javascript with the help of Dom and the elements can be selected and used.</p>
+            <p class="mt-2 text-xl font-semibold">Name the DOM methods :</p>
+            <ul>
+                <li>1. document.getElementById()</li>
+                <li>2. document.getElementsByClassName()</li>
+                <li>3. document.getElementsByTagName()</li>
+                <li>4. document.querySelector()</li>
+                <li>5. document.querySelectorALL()</li>
+            </ul>
+        </section>
+
+        <section class="mx-4">
+            <p class="mt-10 text-2xl font-semibold text-center"><u>What is event bubble?</u></p>
+            <p class="mt-4"><span class="text-xl font-semibold">Ans : </span>By bubbling we generally mean something rising from the bottom to the top. Similarly, in the case of javascript, event bubble means that if there is something in a child and if that child is triggered, then its parent is triggered as soon as the child itself is triggered. If that parent also has a grandparent, it also triggers that parent. In this way it continues as long as the parent and moves upwards. Thus the child first triggers itself and then the parent via the event bubble.</p>
+        </section>
+
+        <section class="mx-4">
+            <p class="mt-10 text-2xl font-semibold text-center"><u>What is a callback function and why will you use it?</u></p>
+            <p class="mt-4"><span class="text-xl font-semibold">Ans : </span>A callback function is a function that can be given as a parameter for another function.  If we make an equation to a function and log the console to another function, we use that function as a parameter for the equation function. After giving the name of the console log function in place of the value of the parameter of the equation function, the equation function will become console log. The console log function that is used as a parameter for the equation function is callback function. This makes javascript easier by using one function as a parameter for another function in multiple places and it becomes easier to control the function.</p>
+        </section>
+    </main>
+</body>
+</html>

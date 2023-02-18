@@ -1,0 +1,51 @@
+.space-between{
+    justify-content: space-between;
+}
+
+.inline{
+    display: inline;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 6px;
+}
+
+.d-none{
+    display: none;
+}
+
+.animation:hover{
+    animation-name: colorChange;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    color: #fff;
+}
+
+@keyframes colorChange {
+    0%{
+        background-color: aqua;
+    }
+    25%{
+        background-color: blue;
+    }
+    50%{
+        background-color: blueviolet;
+    }
+    75%{
+        background-color: brown;
+    }
+    1000%{
+        background-color: chartreuse;
+    }
+   
+}
+
+@media only screen and (max-width:576px){
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);      
+    }
+}

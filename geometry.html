@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/ae1167e100.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="flex space-between mx-12 bg-sky-200 px-10 mt-4 rounded-sm">
+        <p><span class="text-2xl font-bold">Interactive</span><br>Geometry Genius</p>
+        <a href="blog.html"><button class="bg-blue-600 my-3 px-4 py-1 rounded-lg">Blog</button></a>
+    </header>
+
+    <main class="grid gap-4 mx-12 mt-12">
+        <!-- Section 1 -->
+        <section class="px-1 py-24 text-center rounded-lg shadow-xl animation">
+            <img class="mx-auto mb-3" src="images/triangle.png" alt="">
+
+            <p class="text-2xl font-semibold">Triangle</p>
+
+            <p class="my-3">Area (A) = <span id="triangle-value">0.5</span> <i class="fa-solid fa-xmark"></i> <span id="triangle-value-b">b</span> <i class="fa-solid fa-xmark"></i> <span id="triangle-value-h">h</span></p>
+
+            <p class="mb-8 mx-8"><input id="triangle-input-b" type="text" class="bg-gray-200 mb-2 text-x rounded-lg py-1 pl-2 text-black" size = '5' placeholder="b"> cm <input id="triangle-input-h" type="text" class="inli bg-gray-200 rounded-lg py-1 pl-2 text-black" size = '5' placeholder="h"> cm</p>
+
+            <button id="triangle-btn" class="bg-blue-600 py-2 px-14 rounded-lg">Calculation</button>     
+        </section>
+         
+        <!-- Section 2 -->
+        <section class="shadow-xl px-1 py-24 text-center rounded-lg animation"> 
+            <img class="mx-auto mb-3" src="images/rectangle.png" alt="">
+
+            <p class="text-2xl font-semibold">Rectangle</p>
+
+            <p class="my-3">Area (A) = <span id="rectangle-value-w">W</span> <i class="fa-solid fa-xmark"></i> <span id="rectangle-value-l">l</span></p>
+
+            <p class="mb-8"><input id="rectangle-input-w" type="text" class=" bg-gray-200 mb-2 rounded-lg py-1 pl-2 text-black" size = '5' placeholder="w"> cm <input  size="5" type="text" id="rectangle-input-l" class="rounded-lg bg-gray-200 py-1 pl-2 text-black" placeholder="l"> cm</p>
+
+            <button id="rectangle-btn" class="bg-blue-600 py-2 px-14 rounded-lg">Calculation</button>     
+        </section>
+
+        <!-- Section 3 -->
+        <section class="shadow-xl px-1 py-24 text-center rounded-lg animation">
+            <img class="mx-auto mb-3" src="images/parallelogram.png" alt="">
+
+            <p class="text-2xl font-semibold">Parallelogram</p>
+
+            <p class="my-3">Area (A) =<span id="parallelogram-value-b">b</span> <i class="fa-solid fa-xmark"></i> <span id="parallelogram-value-h">h</span></p>
+
+            <p class="mb-11">b=<span id="parallelogram-amount-b">10</span>cm, h=<span id="parallelogram-amount-h">12</span>cm</p>
+
+            <button id="parallelogram-btn" class="bg-blue-600 py-2 px-14 rounded-lg">Calculation</button>     
+        </section>
+
+        <!-- Section 4 -->
+        <section id="area-section" class="shadow-xl px-1 pt-5  rounded-lg pl-10">
+            <p class="text-center text-xl font-semibold "><u>Area Calculation</u></p> 
+            <p id="triangle-ans" class=" mt-6 d-none"> <span class="text-sm font-bold">1. Triangle :</span> <span id="triangle-result" class="ml-2">00</span id='triangle-cm'> cm<sup>2</sup> <button id="triangle-convert" class="bg-blue-600 py-1 px-3 rounded-lg ml-2"> Convert to m<sup>2</sup></button></p>
+
+            <p id="rectangle-ans" class=" mt-6 d-none"> <span class="text-sm font-bold">2. Rectangle :</span> <span id="rectangle-result" class="ml-2">00</span> cm<sup>2</sup> <button id="rectangle-convert" class="bg-blue-600 py-1 px-3 rounded-lg ml-2"> Convert to m<sup>2</sup></button></p>
+
+            <p id="parallelogram-ans" class=" mt-6 d-none"> <span class="text-sm font-bold">3.  Parallelogram :</span> <span id="parallelogram-result" class="ml-2">00</span> cm<sup>2</sup> <button id="parallelogram-convert" class="bg-blue-600 py-1 px-3 rounded-lg ml-2"> Convert to m<sup>2</sup></button></p>
+
+            <p id="rhombus-ans" class=" mt-6 d-none"> <span class="text-sm font-bold">4. Rhombus :</span> <span id="rhombus-result" class="ml-2">00</span> cm<sup>2</sup> <button id="rhombus-convert" class="bg-blue-600 py-1 px-3 rounded-lg ml-2"> Convert to m<sup>2</sup></button></p>
+
+            <p id="pentagon-ans" class=" mt-6 d-none"> <span class="text-sm font-bold">5. Pentagon :</span> <span id="pentagon-result" class="ml-2">00</span> cm<sup>2</sup> <button id="pentagon-convert" class="bg-blue-600 py-1 px-3 rounded-lg ml-2"> Convert to m<sup>2</sup></button></p>
+
+            <p id="ellipse-ans" class=" mt-6 d-none"> <span class="text-sm font-bold">6. Ellipse :</span> <span id="ellipse-result" class="ml-2">00</span> cm<sup>2</sup> <button id="ellipse-convert" class="bg-blue-600 py-1 px-3 rounded-lg ml-2"> Convert to m<sup>2</sup></button></p>
+        </section>
+    </main>
+
+    <main class="grid gap-4 mx-12 mt-12">
+        <!-- Section 5 -->
+        <section class="shadow-xl px-1 py-24 text-center rounded-lg animation">
+    
+           <img class="mx-auto mb-3" src="images/rhombus.png" alt="">
+    
+           <p class="text-2xl font-semibold">Rhombus</p>
+    
+           <p class="my-3">Area (A) = <span id="rhombus-value">0.5</span> <i class="fa-solid fa-xmark"></i> <span id="rhombus-value-d1">d<sub>1</sub> </span> <i class="fa-solid fa-xmark"></i> <span id="rhombus-value-d2">d<sub>2</sub> </span></p>
+    
+           <p class="mb-8">d<sub>1</sub>=<span id="rhombus-amount-d1">16</span>cm, d<sub>2</sub>=<span id="rhombus-amount-d2">8</span>cm</p>
+    
+           <button id="rhombus-btn" class="bg-blue-600 py-2 px-14 rounded-lg">Calculation</button>     
+       </section>
+    
+       <!-- Section 6 -->
+       <section class="shadow-xl px-1 py-24 text-center rounded-lg animation">
+           <img class="mx-auto mb-3" src="images/pentagon.png" alt="">
+    
+           <p class="text-2xl font-semibold">Pentagon</p>
+    
+           <p class="my-3">Area (A) = <span id="pentagon-value">0.5</span> <i class="fa-solid fa-xmark"></i> <span id="pentagon-value-p">p</span> <i class="fa-solid fa-xmark"></i> <span id="pentagon-value-b">b</span></p>
+    
+           <p class="mb-9"> p =<span id="pentagon-amount-p">6</span>cm, b = <span id="pentagon-amount-b">10</span>cm</p>
+    
+           <button id="pentagon-btn" class="bg-blue-600 py-2 px-14 rounded-lg">Calculation</button>     
+       </section>
+    
+       <!-- Section 7 -->
+       <section class="shadow-xl px-1 py-24 text-center rounded-lg animation">
+           <img class="mx-auto mb-3" src="images/ellipse.png" alt="">
+    
+           <p class="text-2xl font-semibold">Ellipse  </p>
+    
+           <p class="my-3">Area (A) = <span id="ellipse-value-pi">&#x213C</span><span id="ellipse-value-a">a</span><span id="ellipse-value-b">b</span></p>
+    
+           <p class="mb-11">a=<span id="ellipse-amount-a">10</span>cm, b=<span id="ellipse-amount-b">4</span>cm</p>
+    
+           <button id="ellipse-btn" class="bg-blue-600 py-2 px-14 rounded-lg">Calculation</button>     
+       </section>
+    </main>
+    
+
+    <script src="js/utilities.js"></script>
+    <script src="js/style.js"></script>
+</body>
+</html>
